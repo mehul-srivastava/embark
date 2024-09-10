@@ -1,101 +1,76 @@
 import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+const page = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="h-screen w-full custom_bg-tile bg-scroll bg-clip-border">
+      <Navbar />
+      <div className="grid place-items-center h-full w-full max-w-[1240px] mx-auto text-center">
+        <div className="flex flex-col items-center gap-y-8">
+          <div className="w-fit border-2 items-center justify-center rounded-full text-center text-sm py-1 inline-flex h-fit animate-shimmer duration-150 transition-all border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            Start building smart contracts — no rust required!
+          </div>
+          <h1 className="bg-gradient-to-b from-[#fff] to-[#ffffffa3] bg-clip-text text-transparent object-fill font-bold text-6xl leading-tight">
+            Build and deploy smart contracts without any experience in rust
+          </h1>
+          <h4 className="text-orange-500 text-4xl font-semibold mx-auto w-[800px]">
+            Open-source smart contract builder with deployment for new solana developers
+          </h4>
+          <div className="flex items-center justify-center gap-x-2 mt-6 text-white text-base">
+            <a
+              href="https://github.com/mehul-srivastava/builderx"
+              className="border border-[#ffffff0f] rounded bg-gray-800 py-2 px-10 font-medium leading-relaxed flex items-center gap-x-2"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                alt=""
+                className="w-5 rounded-full invert"
+              />
+              Contribute
+            </a>
+            <a
+              href="/build"
+              className="border border-[#ffffff0f] rounded bg-orange-500 py-2 px-10 font-medium leading-relaxed"
+            >
+              Try BuilderX
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <div className="custom_laser inset-[0%_0%_0%_auto]"></div>
+      <div className="custom_laser inset-[0%_auto_0%_0%]"></div>
     </div>
   );
-}
+};
+
+const Navbar = () => {
+  return (
+    <nav className="fixed flex w-full items-center justify-between px-16 py-6">
+      <div className="flex items-center gap-x-4">
+        <Image src="/logo.svg" width={32} height={32} alt="logo" className="w-8" />
+        <span className="font-medium text-white text-xl">BuilderX</span>
+      </div>
+      <div className="flex items-center gap-x-4 text-white text-xs">
+        <a
+          href="/build"
+          className="border border-[#ffffff0f] rounded bg-orange-500 py-1 px-3 font-medium leading-relaxed"
+        >
+          Try BuilderX
+        </a>
+        {/* <a
+          href="https://github.com/mehul-srivastava/builderx"
+          className="border border-[#ffffff0f] rounded bg-gray-800 py-1 px-3 font-medium leading-relaxed flex items-center gap-x-2"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            alt=""
+            className="w-3 rounded-full invert"
+          />
+          Github
+        </a> */}
+      </div>
+    </nav>
+  );
+};
+
+export default page;
