@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import RecoilProvider from "@/providers/RecoilProvider";
+
 import "./globals.css";
 
 const poppins = Poppins({
@@ -18,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.className} antialiased`}>{children}</body>
-    </html>
+    <RecoilProvider>
+      <html lang="en">
+        <body className={`${poppins.className} antialiased bg-black`}>{children}</body>
+      </html>
+    </RecoilProvider>
   );
 }

@@ -10,8 +10,8 @@ body {
 
 .custom_bg-tile {
   background-position: 0px 0px;
-  background-size: 100px;
-  background-color: #000;
+  background-size: 150px;
+  background-color: rgba(0, 0, 0, 0);
   background-image: url(/tile.png);
 }
 
