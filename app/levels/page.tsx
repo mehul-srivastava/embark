@@ -8,56 +8,56 @@ const roadmap = [
     title: "Counter Dapp",
     direction: 1,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non mattis justo. Nullam volutpat, nibh et viverra sodales, magna tellus accumsan nisl",
+      "In this module, you'll learn how to create a simple counter decentralized application (DApp). We’ll guide you through writing a smart contract that allows users to keep track of a count.",
   },
   {
     id: 2,
     title: "Todo Management Dapp 🚧",
     direction: 1,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non mattis justo. Nullam volutpat, nibh et viverra sodales, magna tellus accumsan nisl",
+      "In this module, you’ll learn to create a Todo management DApp. We’ll show you how to write a smart contract for creating, reading, updating, and deleting tasks on the blockchain.",
   },
   {
     id: 3,
     title: "ERC20 Token Generation 🚧",
     direction: -1,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non mattis justo. Nullam volutpat, nibh et viverra sodales, magna tellus accumsan nisl",
+      "In this module, you’ll learn how to create your own ERC20 token. We’ll guide you through writing a smart contract that defines your token’s name, symbol, and total supply on the blockchain.",
   },
   {
     id: 4,
     title: "Decentralised Voting System 🚧",
     direction: -1,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non mattis justo. Nullam volutpat, nibh et viverra sodales, magna tellus accumsan nisl",
+      "In this module, you’ll create a decentralized voting system. We’ll show you how to write a smart contract that lets users cast votes securely, ensuring transparency with an immutable record.",
   },
   {
     id: 5,
     title: "NFT Minting and Management 🚧",
     direction: -1,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non mattis justo. Nullam volutpat, nibh et viverra sodales, magna tellus accumsan nisl",
+      "In this module, you’ll learn to mint and manage NFTs. We’ll guide you through writing a smart contract that allows users to create unique tokens and track their ownership on the blockchain.",
   },
   {
     id: 6,
     title: "Decentralized Fiverr (Escrow) 🚧",
     direction: -1,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non mattis justo. Nullam volutpat, nibh et viverra sodales, magna tellus accumsan nisl",
+      "In this module, you’ll create a decentralized Fiverr platform with escrow features. We’ll show you how to write a smart contract that securely holds funds until services are completed, ensuring trust between buyers and sellers.",
   },
   {
     id: 7,
     title: "Decentralized Exchange 🚧",
     direction: 1,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non mattis justo. Nullam volutpat, nibh et viverra sodales, magna tellus accumsan nisl",
+      "In this module, you’ll create a decentralized exchange (DEX). We’ll guide you through writing a smart contract for secure, peer-to-peer token trading, including automated market making for a dynamic experience.",
   },
   {
     id: 8,
     title: "Complex DeFi Protocol 🚧",
     direction: 0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non mattis justo. Nullam volutpat, nibh et viverra sodales, magna tellus accumsan nisl",
+      "In this module, you’ll learn to create a complex DeFi protocol. We’ll guide you through writing a smart contract that integrates various features like lending, borrowing, and yield farming, providing users with advanced financial tools on the blockchain.",
   },
 ];
 
