@@ -11,36 +11,25 @@ const Editor = () => {
   // const code = useRecoilValue(codeAtom)
 
   const code = `use anchor_lang::prelude::*;
-declare_id!("PUBLIC_KEY_WILL_BE_GENERATED_LATER");
+declare_id!("PUBLIC_KEY_HERE");
 
 #[program]
-pub mod nfts_page {
+pub mod counter_contract {
     use super::*;
 
-    pub fn initialize_page(ctx: Context<Initialize>, title: String, description: String, price: f32, nft_count: u32, image: String) -> Result<()> { 
-        let account = &mut ctx.accounts.page_account;
+    pub fn initialize(ctx: Context<Initialize>) -> Result<()> { 
+        let account = &ctx.accounts.counter_account;
 
-        account.title = title;
-        account.description = description;
-        account.price = price;
-        account.nft_count = nft_count;
-        account.image = image;
-
-        msg!("Payment page created for reward type - nfts!");
+        msg!("Counter account has been initialised! Current count: {}", account.count);
         Ok(())
     }
 
-    pub fn update_page(ctx: Context<Update>, title: String, description: String, price: f32, nft_count: u32, image: String) -> Result<()> {
-        let account = &mut ctx.accounts.page_account;
+    pub fn update(ctx: Context<Update>, count: u64) -> Result<()> {
+        let account = &mut ctx.accounts.counter_account;
 
-        account.title = title;
-        account.description = description;
-        account.nft_count = nft_count;
-        account.price = price;
-        account.image = image;
+        account.count = counter.count + 1;
 
-
-        msg!("Payment page updated!");
+        msg!("Counter has been updated! Current count: {}", account.count);
         Ok(())
     }
 }
@@ -53,25 +42,21 @@ pub struct Initialize<'info> {
     #[account(
         init,
         payer = user,
-        space = 8 + 100 + 500 + 50 + 100 + 200
+        space = 8 + CounterAccount::INIT_SPACE)
     )]
-    pub page_account: Account<'info, NftsPage>,
+    pub counter_account: Account<'info, CounterAccount>,
     pub system_program: Program<'info, System>,
 }
 
 #[derive(Accounts)]
 pub struct Update<'info> {
     #[account(mut)]
-    pub page_account: Account<'info, NftsPage>,
+    pub counter_account: Account<'info, CounterAccount>,
 }
 
 #[account]
-pub struct NftsPage {
-    title: String,
-    description: String,
-    price: f32,
-    nft_count: u32,
-    image: String,
+pub struct CounterAccount {
+    count: u64,
 }`;
 
   return (
