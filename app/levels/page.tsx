@@ -66,7 +66,7 @@ const page = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar className="border-b border-b-gray-900 bg-black" />
       <div className="text-white pt-28 mx-auto w-full flex flex-col items-center justify-center">
         {roadmap.map((item, idx) => {
           let indentation;
@@ -103,6 +103,11 @@ const page = () => {
               >
                 <h2 className="font-bold text-xl">{item.title}</h2>
                 <p className="text-sm mt-2">{item.description}</p>
+                {item.id === 1 && (
+                  <small className="text-gray-500 mt-4 block">
+                    Published On: 18 September 2024
+                  </small>
+                )}
               </div>
               <Link
                 href={item.id != 1 ? "javascript:void(0)" : "/levels/1"}

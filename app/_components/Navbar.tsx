@@ -1,8 +1,10 @@
 import Image from "next/image";
 
-const Navbar = () => {
+const Navbar = ({ className }: { className?: string }) => {
   return (
-    <nav className="fixed flex w-full items-center justify-between px-16 py-6 border-b bg-black border-b-gray-900 z-50">
+    <nav
+      className={`fixed flex w-full items-center justify-between px-16 py-6 z-50 ${className}`}
+    >
       <div className="flex items-center gap-x-4">
         <Image src="/logo.svg" width={32} height={32} alt="logo" className="w-8" />
         <span className="font-medium text-white text-xl">Embark</span>
@@ -23,9 +25,7 @@ const Navbar = () => {
             alt=""
             className="w-3 rounded-full invert"
           />
-          <p>
-            Star <small>(1)</small>
-          </p>
+          <p>Star</p>
         </a>
       </div>
     </nav>
