@@ -28,8 +28,9 @@ const Sidebar = () => {
         <div className="text-white">
           <p className="text-white/90">
             Congratulations on starting your journey into smart contract development! This
-            is Level 1, and we're excited to have you. By the end of this level, you'll be
-            able to build rudimentary contracts on your own. Let's dive in!
+            is Level 1, and we&apos;re excited to have you. By the end of this level,
+            you&apos;ll be able to build rudimentary contracts on your own. Let&apos;s
+            dive in!
           </p>
         </div>
 
@@ -59,19 +60,19 @@ const Sidebar = () => {
         <div>
           <small className="uppercase font-bold text-orange-400">Step 2</small>
           <p className="text-white/90">
-            In the editor, focus on the bottom-most snippet of code. That's the "account"
-            we've been discussing, which is nothing but a structure. As you can see, it
-            defines the data that your contract account will hold. In this case, the
-            counter value.
+            In the editor, focus on the bottom-most snippet of code. That&apos;s the
+            "account" we&apos;ve been discussing, which is nothing but a structure. As you
+            can see, it defines the data that your contract account will hold. In this
+            case, the counter value.
           </p>
         </div>
 
         <div>
           <small className="uppercase font-bold text-orange-400">Step 3</small>
           <p className="text-white/90">
-            Now, let's look at the top of the code, where the <kbd>initialise</kbd> and{" "}
-            <kbd>update</kbd> functions are defined (we'll discuss derived accounts
-            shortly).
+            Now, let&apos;s look at the top of the code, where the <kbd>initialise</kbd>{" "}
+            and <kbd>update</kbd> functions are defined (we&apos;ll discuss derived
+            accounts shortly).
             <br />
             <br />
             The first function is the initialization function, which, as the name
@@ -79,7 +80,7 @@ const Sidebar = () => {
             <br />
             <br />
             The second function, update, increments the counter each time it is called.
-            For now, let's focus on the initialise function.
+            For now, let&apos;s focus on the initialise function.
           </p>
         </div>
 
@@ -100,7 +101,7 @@ const Sidebar = () => {
             Another thing to be noted here is that the context argument is being passed an{" "}
             <kbd>Initialise</kbd> variable. Now this is used to enable type-checking so
             that you only access the data defined in our account. This{" "}
-            <kbd>Initialise</kbd> variable is coming from our derived accounts! Let's
+            <kbd>Initialise</kbd> variable is coming from our derived accounts! Let&apos;s
             explore that!
           </p>
         </div>
@@ -109,8 +110,8 @@ const Sidebar = () => {
           <small className="uppercase font-bold text-orange-400">Step 6</small>
           <p className="text-white/90">
             If you scroll down to the derived accounts snippet, you can very well see the
-            Initialise struct (structure or blueprint). Now, let's break each component
-            one by one.
+            Initialise struct (structure or blueprint). Now, let&apos;s break each
+            component one by one.
           </p>
           <ol className="text-white/90 mt-2">
             <li className="list-disc ml-4 mt-2">
@@ -137,7 +138,7 @@ const Sidebar = () => {
               specifies that the user who signed the transaction will pay for the account
               creation. <kbd>space = 8 + CounterAccount::INIT_SPACE</kbd> is something
               important as it defines the space allocated for the new account, where 8
-              bytes are usually for storing the account's metadata (like its
+              bytes are usually for storing the account&apos;s metadata (like its
               discriminator) and CounterAccount::INIT_SPACE is a constant that
               automatically allocates space required by our account CounterAccount
               blueprint.
@@ -150,8 +151,8 @@ const Sidebar = () => {
             <li className="list-disc ml-4 mt-2">
               <kbd>{`pub system_program: Program<'info, System>`}</kbd>: This field
               represents the system program, which is a built-in Solana program
-              responsible for account creation and other low-level operations we don't
-              need to worry about.
+              responsible for account creation and other low-level operations we
+              don&apos;t need to worry about.
             </li>
           </ol>
         </div>
@@ -160,28 +161,28 @@ const Sidebar = () => {
           <small className="uppercase font-bold text-orange-400">REST TIME</small>
           <p className="text-white/90">
             Whoa! That was a lot to take in. Take a breather, and feel free to come back
-            to it when you're ready.
+            to it when you&apos;re ready.
           </p>
         </div>
 
         <div>
           <small className="uppercase font-bold text-orange-400">Step 7</small>
           <p className="text-white/90">
-            Alright, let's wrap things up for the initialise function. In the first line,
-            we initialize the account, followed by printing a message that includes the
-            count data associated with the account. In this case, would be zero.
+            Alright, let&apos;s wrap things up for the initialise function. In the first
+            line, we initialize the account, followed by printing a message that includes
+            the count data associated with the account. In this case, would be zero.
           </p>
         </div>
 
         <div>
           <small className="uppercase font-bold text-orange-400">Step 8</small>
           <p className="text-white/90">
-            Now, let's move on to the update function. This time, we are accessing the{" "}
-            <kbd>counter_account</kbd> instead of initializing it. Rust knows we're here
-            to modify the account because, if you look back at the <kbd>Initialise</kbd>{" "}
-            and <kbd>Update</kbd>
-            derived accounts, you'll notice that one uses <kbd>init</kbd> for the account
-            while the other uses <kbd>mut</kbd>. This distinction allows Rust to
+            Now, let&apos;s move on to the update function. This time, we are accessing
+            the <kbd>counter_account</kbd> instead of initializing it. Rust knows
+            we&apos;re here to modify the account because, if you look back at the{" "}
+            <kbd>Initialise</kbd> and <kbd>Update</kbd>
+            derived accounts, you&apos;ll notice that one uses <kbd>init</kbd> for the
+            account while the other uses <kbd>mut</kbd>. This distinction allows Rust to
             understand whether we are initializing or mutating an object.
           </p>
         </div>
@@ -190,7 +191,7 @@ const Sidebar = () => {
           <small className="uppercase font-bold text-orange-400">Step 8</small>
           <p className="text-white/90">
             In the second line, we are simply incrementing the count by one. Although this
-            is a fairly risky way, as there's a possibility that the count is at the{" "}
+            is a fairly risky way, as there&apos;s a possibility that the count is at the{" "}
             <kbd>MAX VALUE</kbd>, in which case this will throw an error. But for the sake
             of simplicity, we can use this snippet. After incrementing, we print a message
             displaying the updated count!
@@ -202,14 +203,14 @@ const Sidebar = () => {
           <p className="text-white/90">
             Some axuillary yet important stuff includes the name of your smart contract
             which is <kbd>counter_contract</kbd> defined in the 4th line. <kbd>mod</kbd>{" "}
-            keyword stands for modules which means from Rust's perspective you are just
-            creating modules.
+            keyword stands for modules which means from Rust&apos;s perspective you are
+            just creating modules.
             <br />
             <br />
             Additionally, note the <kbd>declare_id</kbd> macro (which differs slightly
-            from functions) provided by Anchor. It is used to define the program's public
-            key. The public key is crucial because it uniquely identifies your Solana
-            program on the blockchain.
+            from functions) provided by Anchor. It is used to define the program&apos;s
+            public key. The public key is crucial because it uniquely identifies your
+            Solana program on the blockchain.
           </p>
         </div>
 

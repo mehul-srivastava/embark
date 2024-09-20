@@ -20,9 +20,11 @@ const Navbar = ({ className }: { className?: string }) => {
           href="https://github.com/mehul-srivastava/embark"
           className="border border-[#ffffff0f] rounded bg-gray-800 py-1 px-3 font-medium leading-relaxed flex items-center gap-x-2"
         >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-            alt=""
+          <Image
+            src="/github-icon.png"
+            width={512}
+            height={512}
+            alt="Embark"
             className="w-3 rounded-full invert"
           />
           <p>Star</p>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navbar from "./_components/Navbar";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -11,7 +12,7 @@ const page = () => {
             All levels are written in Rust for Anchor! ✨
           </div>
           <h1 className="bg-gradient-to-b from-[#fff] to-[#ffffffa3] bg-clip-text text-transparent object-fill font-bold text-6xl leading-tight">
-            Fastrack your journey into mastering smart contract development
+            Embark on a journey into mastering smart contract development
           </h1>
           <h4 className="text-orange-500 text-4xl font-semibold mx-auto w-[800px]">
             Learn to build smart contracts with this intuitive open source tool
@@ -27,9 +28,11 @@ const page = () => {
               href="https://github.com/mehul-srivastava/embark"
               className="border border-[#ffffff0f] rounded bg-gray-800 py-2 px-10 font-medium leading-relaxed flex items-center gap-x-2"
             >
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt=""
+              <Image
+                src="/github-icon.png"
+                width={512}
+                height={512}
+                alt="Embark"
                 className="w-5 rounded-full invert"
               />
               Embark
