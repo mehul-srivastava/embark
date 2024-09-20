@@ -1,10 +1,6 @@
 import React from "react";
 import Editor from "./_components/Editor";
 
-export const generateStaticParams = () => {
-  return ["1"];
-};
-
 const page = () => {
   return (
     <div className="flex items-center justify-center h-full">
