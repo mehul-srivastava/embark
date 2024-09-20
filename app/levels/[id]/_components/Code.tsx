@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useLayoutEffect } from "react";
 import hljs from "highlight.js/lib/core";
 import rust from "highlight.js/lib/languages/rust";
 import { useRecoilValue } from "recoil";
