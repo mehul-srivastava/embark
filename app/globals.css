@@ -8,6 +8,10 @@ body {
   width: 100%;
 }
 
+#sidebar::-webkit-scrollbar {
+  display: none;
+}
+
 .custom_bg-tile {
   background-position: 0px 0px;
   background-size: 150px;
@@ -27,4 +31,45 @@ body {
   height: 100vh;
   display: flex;
   position: fixed;
+}
+
+.custom_btn-roadmap {
+  background-color: #c05910;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0px 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateZ(0px);
+}
+
+.custom_btn-roadmap::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-clip: padding-box;
+  background-color: #f97316;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+}
+
+.custom_btn-roadmap.disabled {
+  background-color: #3d1c04;
+  cursor: not-allowed;
+}
+
+.custom_btn-roadmap.disabled::after {
+  background-color: #5c2b08;
+  cursor: not-allowed;
 }

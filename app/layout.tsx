@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+
 import RecoilProvider from "@/providers/RecoilProvider";
 
 import "./globals.css";

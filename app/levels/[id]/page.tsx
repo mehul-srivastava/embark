@@ -18,7 +18,10 @@ const page = () => {
 
 const Sidebar = () => {
   return (
-    <div className="fixed top-0 right-0 bg-gray-800 max-w-[450px] w-full h-full p-6 overflow-y-auto">
+    <div
+      className="fixed top-0 right-0 bg-gray-800 max-w-[450px] w-full h-full p-6 overflow-y-auto"
+      id="sidebar"
+    >
       <h3 className="text-white font-semibold text-4xl">Level 1</h3>
       <h3 className="text-gray-500 font-normal text-2xl">Basic Counter Dapp</h3>
       <div className="flex flex-col gap-y-10 mt-6">

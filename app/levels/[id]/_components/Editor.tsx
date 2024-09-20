@@ -82,7 +82,7 @@ pub struct NftsPage {
         </h4>
       </div>
       <div className="bg-[#1c1b1b] h-full border border-gray-500 rounded-md max-w-[calc(100vw-450px-48px)]">
-        <pre className="h-full w-full">
+        <pre className="h-[calc(100vh-56px-24px-24px)] w-full">
           <code className="rounded-md h-full">{code}</code>
         </pre>
       </div>
