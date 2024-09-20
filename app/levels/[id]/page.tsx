@@ -61,9 +61,9 @@ const Sidebar = () => {
           <small className="uppercase font-bold text-orange-400">Step 2</small>
           <p className="text-white/90">
             In the editor, focus on the bottom-most snippet of code. That&apos;s the
-            "account" we&apos;ve been discussing, which is nothing but a structure. As you
-            can see, it defines the data that your contract account will hold. In this
-            case, the counter value.
+            &quot;account&quot; we&apos;ve been discussing, which is nothing but a
+            structure. As you can see, it defines the data that your contract account will
+            hold. In this case, the counter value.
           </p>
         </div>
 
@@ -116,9 +116,9 @@ const Sidebar = () => {
           <ol className="text-white/90 mt-2">
             <li className="list-disc ml-4 mt-2">
               <kbd>{`pub struct Initialize<'info>`}</kbd>: This declares a blueprint named
-              Initialize, which has a lifetime parameter <kbd>'info</kbd> (a rust concept
-              you can ignore for now). This is often used in Solana programs to ensure the
-              references are valid for the duration needed.
+              Initialize, which has a lifetime parameter <kbd>&apos;info</kbd> (a rust
+              concept you can ignore for now). This is often used in Solana programs to
+              ensure the references are valid for the duration needed.
             </li>
             <li className="list-disc ml-4 mt-2">
               <kbd>{`#[account(mut)]`}</kbd>: This attribute indicates that the account is

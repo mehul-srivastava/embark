@@ -1,14 +1,16 @@
 import React, { useLayoutEffect } from "react";
 import hljs from "highlight.js";
-import "highlight.js/styles/stackoverflow-dark.css";
 import { useRecoilValue } from "recoil";
+import rust from "highlight.js/lib/languages/rust";
+import "highlight.js/styles/tokyo-night-dark.css";
+
 import { codeAtom } from "@/store/atoms";
 
-// Another theme: tokyo-night-dark.css
+// Another theme:
 
 const Editor = () => {
   useLayoutEffect(() => hljs.highlightAll());
-  hljs.registerLanguage("rust", require("highlight.js/lib/languages/rust"));
+  hljs.registerLanguage("rust", rust);
 
   const code = useRecoilValue(codeAtom);
 
