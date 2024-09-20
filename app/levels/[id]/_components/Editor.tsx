@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useLayoutEffect } from "react";
 import hljs from "highlight.js";
 import { useRecoilValue } from "recoil";
