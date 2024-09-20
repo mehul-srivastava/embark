@@ -1,4 +1,5 @@
 # Embark
+![Embark landing page](https://github.com/mehul-srivastava/embark/blob/main/public/landing-page.png?raw=true)
 
 Introducing <strong>Embark</strong>, an open-source learning platform designed to empower developers at every skill level in mastering smart contract development. Whether someone is a complete novice or an experienced programmer, Embark will offer structured levels that guide them through the essential concepts of building smart contracts on the Solana blockchain.
 
